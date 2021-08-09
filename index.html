@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Programa de becas educativas</title>
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('/fonts/Gilroy-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: 'Gilroy-l';
+            src: url('/fonts/Gilroy-Light.otf');
+        }
+
+        @font-face {
+            font-family: 'Gilroy-bold';
+            src: url('/fonts/Gilroy-ExtraBold.otf');
+        }
+
+
+        .body {
+            font-family: 'Gilroy-l';
+        }
+
+        .container-landing {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Gilroy-l';
+            font-size: 1.8rem;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2D3344;
+            font-family: 'Gilroy-l';
+            font-weight: bolder;
+            font-size: 30px;
+            letter-spacing: 0;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Gilroy-l';
+            margin: 0px !important;
+        }
+
+        .header-estructure {
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 15px;
+            height: 75px;
+            width: 1367px;
+            background-color: #10172A;
+            color: white;
+            margin-bottom: 0px !important;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .nav-cta {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-cta-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 230px;
+            border-radius: 20px;
+            background-color: #714FF1;
+            color: white;
+            font-size: .9rem;
+        }
+
+        .nav-cta-btn .nav-cta-icon {
+            width: 1rem;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            top: 0px;
+            height: 666px;
+            width: 1367px;
+            background-color: #10172A;
+            background-image: url('./img/back-header-transparent.png');
+        }
+
+        .header-promo-l {
+            margin-left: 0px !important;
+            padding-left: 0px !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: flex-end;
+        }
+
+        .header-promo-l img {
+            width: 321px;
+        }
+
+        .header-promo-r {
+            margin-right: 0px !important;
+            padding-right: 0px !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .header-promo-r img {
+            width: 350px;
+        }
+
+        .btn-cta-navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: #714FF1;
+            color: white;
+            width: 230px;
+            height: 40px;
+            font-size: .8rem;
+        }
+
+        .btn-cta-navbar img {
+            color: white;
+            width: 20px;
+            padding-right: 5px;
+        }
+
+        .btn-cta-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: #714FF1;
+            color: white;
+            width: 290px;
+            height: 45px;
+            font-size: 1rem;
+        }
+
+        .btn-cta-header img {
+            color: white;
+            width: 23px;
+            padding-right: 5px;
+        }
+
+        .header-center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .section-movistar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            font-size: .7rem;
+            padding-top: 20px;
+        }
+
+        .section-movistar img {
+            width: 100px;
+            margin-left: 10px;
+        }
+
+        .header-text-bold {
+            font-family: 'Gilroy-l';
+            font-size: 2rem;
+            font-weight: 900;
+            color: #714FF1;
+        }
+
+        .text-h2 {
+            padding-top: 130px;
+            font-family: 'Gilroy-l';
+            font-size: 2rem;
+            color: white;
+        }
+
+        .header-section-squeare {
+            top: 680px;
+            z-index: 3;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 1366px;
+            margin: 0 auto;
+        }
+
+        .square-header-gift {
+            height: 168.63px;
+            width: 285.07px;
+            border-radius: 10px;
+            background-color: #714FF1;
+            padding: 10px;
+            margin: 10px;
+            background-image: url('./img/icon-gift.png');
+            background-repeat: no-repeat;
+        }
+
+        .square-header-bookmark {
+            height: 168.63px;
+            width: 285.07px;
+            border-radius: 10px;
+            background-color: #714FF1;
+            padding: 10px;
+            margin: 10px;
+            background-image: url('./img/icon-bookmark.png');
+            background-repeat: no-repeat;
+        }
+
+        .square-header-flag {
+            height: 168.63px;
+            width: 285.07px;
+            border-radius: 10px;
+            background-color: #714FF1;
+            padding: 10px;
+            margin: 10px;
+            background-image: url('./img/icon-flag.png');
+            background-repeat: no-repeat;
+        }
+
+        .square-header-award {
+            height: 168.63px;
+            width: 285.07px;
+            border-radius: 10px;
+            background-color: #714FF1;
+            padding: 10px;
+            margin: 10px;
+            background-image: url('./img/icon-award.png');
+            background-repeat: no-repeat;
+        }
+
+        .parraf-square {
+            color: #FFFFFF;
+            font-family: 'Gilroy-l';
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 20px;
+            padding: 33px 20px 20px 25px;
+        }
+
+        .section-benefits {
+            box-sizing: border-box;
+            height: 150px;
+            width: 350px;
+            border: 1px solid #DDD3FF;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .section-benefits-structure {
+            margin-top: 0px;
+            padding-top: 150px;
+            text-align: center;
+            background-image: url('./img/back-benefits.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin: 0 auto;
+            width: 1366px;
+
+        }
+
+        .section-benefits-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .circle-benefits-1 {
+            margin-top: -40px;
+        }
+
+        .section-academy {
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            width: 1366px;
+            padding-top: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        .section-academy p {
+            height: 124px;
+            width: 1000px;
+            color: #2D3344;
+            font-family: 'Gilroy-l';
+            font-size: 20px;
+            letter-spacing: 0;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .btn-cta-download {
+            display: flex;
+            flex-direction: row;
+            border-radius: 20px;
+            background-color: #714FF1;
+            color: white;
+            width: 260px;
+            height: 50px;
+            font-size: .8rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .btn-cta-download img {
+            color: white;
+            width: 30px;
+            padding-right: 5px;
+        }
+
+        .section-thematic-masterclass {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin: 0 auto;
+            background-color: #10172A;
+            background-image: url('./img/bg-tematicas-master-class.jpg');
+            width: 1366px;
+            height: 666px;
+        }
+
+        .section-criterios {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 40px;
+            width: 1366px;
+            height: 500px;
+            background-image: url('/BECAS/img/backElegibilidad.svg');
+            background-repeat: no-repeat;
+            margin-top: 80px;
+        }
+
+        .parraf-section-criterios {
+            width: 369px;
+            color: #2D3344;
+            font-family: Gilroy-Medium;
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 30px;
+            text-align: justify;
+            margin: 0 auto;
+        }
+
+        .section-enterprises {
+            margin: 0 auto;
+        }
+
+        .section-form {
+            margin: 0 auto;
+            height: 1867px;
+            width: 1366px;
+            background-color: #F8F7FF;
+        }
+
+        .section-footer {
+            margin: 0 auto;
+            height: 300px;
+            width: 1366px;
+            border-radius: 20px 20px 0 0;
+            background-color: rgba(16, 23, 42, 0.95);
+        }
+
+        .section-footer-derechos {
+            margin: 0 auto;
+            height: 50px;
+            width: 1366px;
+            background-color: #10172A;
+        }
+
+        .form-cards {
+            padding: 50px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            height: 1110px;
+            width: 1299px;
+            border: 1px solid #DDD3FF;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            box-sizing: border-box;
+            height: 633px;
+            width: 650px;
+            border: 1px solid #DDD3FF;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .form .input-form {
+            box-sizing: border-box;
+            height: 45px;
+            width: 267px;
+            border: 1px solid #E9E9E9;
+            border-radius: 5px;
+            background-color: #FFFFFF;
+        }
+
+        .card-sup {
+            height: 164px;
+            width: 382.72px;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(51, 58, 77, 0) 0%, #333A4D 100%);
+        }
+
+        .car-inf {
+            height: 186px;
+            width: 382.72px;
+            border-radius: 10px;
+            background-color: #714FF1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-landing">
+        <navbar>
+            <div class="row nav">
+                <div class="col s4"><img src="./img/Group 36.svg"><img class="logo"
+                        src="./img/logo-socialme-horizontal.png"></div>
+                <div class="col s8 nav-cta">
+                    <a class="waves-effect btn-cta-navbar">
+                        <img class="nav-cta-icon" src="./img/award-white.svg">APLICAR AL PROGRAMA
+                    </a>
+                </div>
+            </div>
+        </navbar>
+        <header class="header-estructure">
+            <div class="row header">
+                <div class="col s3 header-promo-l">
+                    <img src="./img/promo-l.png">
+                </div>
+                <div class="col s6 header-center-content">
+                    <img src="./img/Digital500.svg">
+                    <h1>Programa de <span class="header-text-bold">becas formativas</span> para mejorar la
+                        competitividad digital de los profesionales en América Latina.</h1>
+                    <a class="waves-effect btn-cta-header">
+                        <img class="nav-cta-icon" src="./img/award-white.svg">APLICAR AL PROGRAMA
+                    </a>
+                    <div class="section-movistar">
+                        <p>Apoyado por:</p>
+                        <img src="./img/logo-fundacion-movistar.png">
+                    </div>
+                    <h2 class="text-h2">Formación digital para las <span class="header-text-bold">carreras del
+                            futuro.</span> </h2>
+                </div>
+                <div class="col s3 header-promo-r"><img src="./img/promo-r.png"></div>
+            </div>
+            <!-- 4 Sections -->
+            <div class="header-section-squeare">
+                <div class="square-header-bookmark">
+                    <p class="parraf-square">Destinado a Medios de Comunicación, Instituciones y Universidades en
+                        América Latina.</p>
+                </div>
+                <div class="square-header-award">
+                    <p class="parraf-square">Te otorgamos 500 becas de capacitación en marketing digital y tecnología
+                        para que le des acceso gratuito a tus audiencias.</p>
+                </div>
+                <div class="square-header-gift">
+                    <p class="parraf-square">Cada institución que es aceptada al programa accede a 500 Becas anuales con
+                        un valor de
+                        U$D 7,200 cada una.</p>
+                </div>
+                <div class="square-header-flag">
+                    <p class="parraf-square">Incluye acceso a un evento por semana todo el año para cada persona que
+                        acceda a la beca gracias a la institución que la promueve.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="section-benefits-structure">
+            <h2>Beneficios del programa</h2>
+            <div class="row section-benefits-row">
+                <div class="section-benefits">
+                    <img class="circle-benefits-1" src="./img/circle-purple-1.png">
+                    <p>Ayudar a disminuir la brecha digital en<br> América Latina.</p>
+                </div>
+                <div class="section-benefits">
+                    <img class="circle-benefits-1" src="./img/circle-pink-2.png">
+                    <p>Acceso a la red de expertos de<br>
+                        <a href="">Social Me</a> y <a href="">Escalab</a> para entrevistas o<br> columnas de opinión.
+                    </p>
+                </div>
+                <div class="section-benefits">
+                    <img class="circle-benefits-1" src="./img/circle-purple-3.png">
+                    <p>Presencia de marca en todos los<br> eventos del año.</p>
+                </div>
+            </div>
+            <div class="row section-benefits-row">
+                <div class="section-benefits">
+                    <img class="circle-benefits-1" src="./img/circle-pink-4.png">
+                    <p>Mejorar la productividad,<br> competitividad y economía digital de<br> las empresas de su país.
+                    </p>
+                </div>
+                <div class="section-benefits">
+                    <img class="circle-benefits-1" src="./img/circle-purple-5.png">
+                    <p>Generar nuevo contenido de valor<br> para sus audiencias y anunciantes.</p>
+                </div>
+                <div class="section-benefits">
+                    <img class="circle-benefits-1" src="./img/circle-pink-6.png">
+                    <p>Acceso a 150 Becas adicionales para<br> sus empleados, clientes, proveedores<br> y cadena de
+                        valor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-academy">
+            <h2>Digital Academy 2021</h2>
+            <p>Conscientes de este escenario, en conjunto, <a href="">Social Me</a> y <a href="">Escalab Academy</a>,
+                lanzamos este programa de becas para que Medios de Comunicación,
+                Universidades e instituciones de Latinoamérica den acceso sin costo a sus audiencias a la academia
+                online de <b>marketing digital</b> y <b>programación</b>,
+                donde cada martes y jueves durante todo el año, expertos internacionales imparten una MasterClass sobre
+                estos temas.</p>
+            <img src="./img/banner-academy.png">
+
+            <a class="waves-effect btn-cta-download">
+                <img class="nav-cta-icon" src="./img/icon-cloud.png">DESCARGAR EL PROGRAMA
+            </a>
+        </section>
+
+        <section class="section-thematic-masterclass">
+            <div class="carousel">
+                <p>Hola minollos decafakk</p>
+                <a class="carousel-item" href="#one!"><img src="/BECAS/img/icon-award.png"></a>
+                <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+                <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+                <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+                <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+            </div>
+        </section>
+
+        <section class="section-criterios">
+            <div class="parraf-section-criterios">
+                <div>
+                    <h2>Elegibilidad & Criterios</h2>
+                    <p>Todos los medios de Comunicación, instituciones<br>
+                        y Universidades de America Latina que se comprometan con la difusion
+                        masiva de este programa de becas a las audiencias que pueden
+                        beneficiarse con nuestro programa educativo podran participar.</p>
+                    <p>Luego de postular seran citados a una entrevista con el Director del programa.</p>
+                    <p>Las Becas deberan ser promocionadas para que los beneficiarios directos puedan acceder.
+                        La institución elegida tendra 150 becas adicionales para sus empleados, proveedores
+                        o clientes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-enterprises">
+            <h2>Ya están otorgando becas</h2>
+            <img src="img/logos-empresas.jpg">
+        </section>
+
+        <section class="section-form">
+            <div class="form">
+                <form>
+                    <h6>Regístrate aquí y aplica tus becas</h6>
+                </form>
+            </div>
+            <div class="form-cards">
+
+                <div>
+                    <div class="card-sup">
+                        <img src="./img/back-benefits.png" </div>
+                        <div class="card-inf"></div>
+                    </div>
+
+                </div>
+        </section>
+
+        <section class="row section-footer">
+            <div class="col s3">
+                <div class="row">
+                    <img src="./img/logoDigital500.png">
+                    <p class="parraf-square">Programa de becas educativas para disminuir la brecha digital en América
+                        Latina.</p>
+                    <img src="./img/banderas.png">
+                </div>
+            </div>
+            <div class="col s3">
+                <img src="./img/logos-footer.png">
+                <div>
+                    <img src="./img/icon-mail.png">
+                    <p class="parraf-square">info@socialme.academy</p>
+                </div>
+                <img src="./img/redessociales.png">
+            </div>
+            <div class="col s3">tres</div>
+            <div class="col s3">cuatro</div>
+        </section>
+
+        <section class="section-footer-derechos">
+            Politicas de privacidad
+        </section>
+
+
+    </div>
+    <!--CLOSE CONTAINER-->
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Feather Icon Script -->
+    <!-- choose one -->
+    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</body>
+
+</html>
